@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kazipal Home</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Welcome to Kazipal Task Board</h1>
+  <a href="/login">Login</a> | <a href="/post-task">Post Task</a>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login - Kazipal</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Login Page</h2>
+  <form method="POST" action="/login">
+    <label>Email:</label><br>
+    <input type="email" name="email"><br><br>
+    <label>Password:</label><br>
+    <input type="password" name="password"><br><br>
+    <button type="submit">Login</button>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post a Task - Kazipal</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h2>Post a New Task</h2>
+  <form method="POST" action="/submit-task">
+    <label>Task Title:</label><br>
+    <input type="text" name="title"><br><br>
+
+    <label>Category:</label><br>
+    <select name="category">
+      <option>Cleaning</option>
+      <option>Plumbing</option>
+      <option>Errands</option>
+      <option>Electrical</option>
+    </select><br><br>
+
+    <label>Location:</label><br>
+    <input type="text" name="location"><br><br>
+
+    <label>Budget (KES):</label><br>
+    <input type="number" name="budget"><br><br>
+
+    <label>Description:</label><br>
+    <textarea name="description"></textarea><br><br>
+
+    <button type="submit">Submit Task</button>
+  </form>
+</body>
+</html>
