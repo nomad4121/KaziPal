@@ -2,32 +2,40 @@
 <html>
 <head>
   <title>Post a Task - Kazipal</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="/static/style.css">
 </head>
-<body>
-  <h2>Post a New Task</h2>
-  <form method="POST" action="/submit-task">
-    <label>Task Title:</label><br>
-    <input type="text" name="title"><br><br>
-
-    <label>Category:</label><br>
-    <select name="category">
-      <option>Cleaning</option>
-      <option>Plumbing</option>
-      <option>Errands</option>
-      <option>Electrical</option>
-    </select><br><br>
-
-    <label>Location:</label><br>
-    <input type="text" name="location"><br><br>
-
-    <label>Budget (KES):</label><br>
-    <input type="number" name="budget"><br><br>
-
-    <label>Description:</label><br>
-    <textarea name="description"></textarea><br><br>
-
-    <button type="submit">Submit Task</button>
-  </form>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">Post a New Task</h2>
+    <form method="POST" action="/post-task" class="bg-white p-4 rounded shadow-sm">
+      <div class="form-group">
+        <label>Task Title:</label>
+        <input type="text" name="title" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Category:</label>
+        <select name="category" class="form-control">
+          <option>Cleaning</option>
+          <option>Plumbing</option>
+          <option>Errands</option>
+          <option>Electrical</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location:</label>
+        <input type="text" name="location" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Budget (KES):</label>
+        <input type="number" name="budget" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Description:</label>
+        <textarea name="description" class="form-control"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Submit Task</button>
+    </form>
+  </div>
 </body>
 </html>
