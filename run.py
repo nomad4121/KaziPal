@@ -34,6 +34,3 @@ def post_task():
 
 if __name__ == "__main__":
     app.run(debug=True)
-@app.route("/tasks")
-def tasks():
-    return render_template("tasks.html")
